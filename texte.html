@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bora comer lanche hoje?</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    background: linear-gradient(to bottom right, #ffccff, #d100d1); /* Fundo com gradiente suave */
+  }
+  
+  #resposta {
+    display: none;
+  }
+  
+  .button {
+    width: 120px; /* Largura dos botões */
+    height: 40px;
+    margin-top: 20px; /* Espaçamento entre os botões */
+    cursor: pointer;
+    border: none;
+    background-color: #f51df5; /* Cor rosa pastel para os botões */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 16px;
+    color: #000000; /* Texto branco */
+  }
+
+  #sim {
+    position: absolute;
+    left: 10%;
+  }
+
+  #nao {
+    position: absolute;
+    right: 10%;
+  }
+
+  h2 {
+    position: relative;
+    color: #f5ebee; /* Cor rosa pastel */
+    font-size: 36px;
+  }
+</style>
+</head>
+<body>
+  <h2><img src="https://placekitten.com/100/100" alt="Gatinho fofo"> Bora comer lanche hoje? <img src="https://placekitten.com/100/100" alt="Gatinho fofo"></h2>
+  <button id="sim" class="button" onclick="responderSim()">Sim</button>
+  <button id="nao" class="button" onmouseover="mudarPosicao()">Não</button>
+  
+  <div id="resposta">
+    <p>Eu te amo!</p>
+    <img src="https://placekitten.com/200/200" alt="Gatinho fofo">
+  </div>
+
+<script>
+function responderSim() {
+  document.getElementById('resposta').style.display = 'block';
+}
+
+function mudarPosicao() {
+  var naoButton = document.getElementById('nao');
+  var newX = Math.random() * window.innerWidth;
+  var newY = Math.random() * window.innerHeight;
+  naoButton.style.left = newX + 'px';
+  naoButton.style.top = newY + 'px';
+}
+</script>
+</body>
+</html>
